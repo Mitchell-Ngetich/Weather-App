@@ -65,7 +65,7 @@
 .section__inputs>button {
   padding: 7px 50px;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 0.4rem;
   font-size: 20px;
   font-weight: 500;
   background-color: white;
@@ -99,4 +99,26 @@
   margin: 0.6rem;
   background-color: transparent;
   border-radius: 2rem;
+}
+
+@media screen and (max-width: 500px) {
+  .section__inputs, .section__temperature {
+    width: 80%;
+    display: inline;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+
+  .section__inputs>button {
+    padding: 2px 17px;
+    margin-top: 1rem;
+  }
+
+  .section__inputs>input {
+    width: 50%;
+    font-size: 15px;
+    font-weight: 300;
+    margin-right: 1rem;
+  }
+  
 }
