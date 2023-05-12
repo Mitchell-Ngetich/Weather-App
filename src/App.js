@@ -3,7 +3,7 @@ import Cold from './Assets/cold.jpg';
 import Description from './Components/Description/Description';
 import { useEffect, useState } from 'react';
 import { getWeatherData } from './Components/Weather/Weather';
-import { FaCity } from 'react-icons/fa';
+// import { FaCity } from 'react-icons/fa';
 
 
 function App() {

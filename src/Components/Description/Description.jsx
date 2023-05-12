@@ -1,6 +1,6 @@
 import React from 'react'
 // import {FaArrowDown} from 'react-icons/fa'
-import { getWeatherData } from '../Weather/Weather'
+// import { getWeatherData } from '../Weather/Weather'
 import './Description.css'
 
 import { FaArrowUp, FaArrowDown, FaWind } from "react-icons/fa";
