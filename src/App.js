@@ -10,11 +10,17 @@ function App() {
 	const [city, setCity] = useState("Paris")
 	const [weather, setWeather] = useState(null);
 	const [units, setUnits] = useState("metric");
+	const [hot, setHot] = useState(Sunny);
 
 	useEffect(() => {
 		const fetchWeatherData = async () => {
 			const data = await getWeatherData(city, units);
 			setWeather(data);
+
+			// dynamic background
+			const background = units === "metric"? 20: 60;
+			if (data.temp <= background) setHot(Cold);
+			else setHot(Sunny);
 		};
 		fetchWeatherData();
 		
@@ -37,7 +43,7 @@ function App() {
 
 
   return (
-		<div className="app" style={{ backgroundImage: `url(${Cold})` }}>
+		<div className="app" style={{ backgroundImage: `url(${hot})` }}>
 			<div className="overlay">
 				{weather && (
 					<div className="container">
